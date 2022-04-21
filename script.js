@@ -1,13 +1,14 @@
-//   JavaScript Data Types -----------------
-// JavaScript variables can hold different data types: numbers, strings, objects and more:
-// JavaScript variables can hold different data types: numbers, strings, objects and more:
-let length = 16; // Number
-let lastName = "Johnson"; // String
-let x = { firstName: "John", lastName: "Doe" }; // Object
+//  --------------   Local Variables  --------------
+// Variables declared within a JavaScript function, become LOCAL to the function.
 
-// ----------------- JavaScript Types are Dynamic -----------------
-// JavaScript has dynamic types. This means that the same variable can be used to hold different data types:
+// Local variables can only be accessed from within the function.
 
-// let x; // Now x is undefined
-// x = 5; // Now x is a Number
-// x = "John"; // Now x is a String
+Example;
+// code here can NOT use carName
+
+function myFunction() {
+  let carName = "Volvo";
+  // code here CAN use carName
+}
+
+// code here can NOT use carName
