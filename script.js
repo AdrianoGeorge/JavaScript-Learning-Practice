@@ -51,3 +51,15 @@ e = x * 10;
 let m, g;
 m = 5;
 g = 6;
+
+// When to Use JavaScript const?
+// If you want a general rule: always declare variables with const.
+
+// If you think the value of the variable can change, use let.
+
+// In this example, price1, price2, and total, are variables:
+
+Example;
+const price1 = 5;
+const price2 = 6;
+let total = price1 + price2;
