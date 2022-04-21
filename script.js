@@ -161,4 +161,19 @@ const t = 10;
   const t = 2;
   // Here x is 2
 }
-console.log(t); // Here x is 10
+// console.log(t); // Here x is 10
+
+// --------------Operator	Example	Same As--------------
+// =	x = y	x = y
+// +=	x += y	x = x + y
+// -=	x -= y	x = x - y
+// *=	x *= y	x = x * y
+// /=	x /= y	x = x / y
+// %=	x %= y	x = x % y
+// <<=	x <<= y	x = x << y
+// >>=	x >>= y	x = x >> y
+// >>>=	x >>>= y	x = x >>> y
+// &=	x &= y	x = x & y
+// ^=	x ^= y	x = x ^ y
+// |=	x |= y	x = x | y
+// **=	x **= y	x = x ** y
