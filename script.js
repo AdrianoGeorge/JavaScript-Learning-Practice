@@ -63,3 +63,11 @@ Example;
 const price1 = 5;
 const price2 = 6;
 let total = price1 + price2;
+
+// The let keyword was introduced in ES6 (2015).
+
+// Variables defined with let cannot be Redeclared.
+
+// Variables defined with let must be Declared before use.
+
+// Variables defined with let have Block Scope.
