@@ -1,28 +1,54 @@
-//  --------------    JavaScript String Methods --------------
+//  --------------   JavaScript Sorting Arrays -------------
+//  --------------   by:  Adrian George  --------------------
 
-// Method	Description
-// charAt()	Returns the character at a specified index (position)
-// charCodeAt()	Returns the Unicode of the character at a specified index
-// concat()	Returns two or more joined strings
-// endsWith()	Returns if a string ends with a specified value
-// fromCharCode()	Returns Unicode values as characters
-// includes()	Returns if a string contains a specified value
-// indexOf()	Returns the index (position) of the first occurrence of a value in a string
-// lastIndexOf()	Returns the index (position) of the last occurrence of a value in a string
-// localeCompare()	Compares two strings in the current locale
-// match()	Searches a string for a value, or a regular expression, and returns the matches
-// repeat()	Returns a new string with a number of copies of a string
-// replace()	Searches a string for a value, or a regular expression, and returns a string where the values are replaced
-// search()	Searches a string for a value, or regular expression, and returns the index (position) of the match
-// slice()	Extracts a part of a string and returns a new string
-// split()	Splits a string into an array of substrings
-// startsWith()	Checks whether a string begins with specified characters
-// substr()	Extracts a number of characters from a string, from a start index (position)
-// substring()	Extracts characters from a string, between two specified indices (positions)
-// toLocaleLowerCase()	Returns a string converted to lowercase letters, using the host's locale
-// toLocaleUpperCase()	Returns a string converted to uppercase letters, using the host's locale
-// toLowerCase()	Returns a string converted to lowercase letters
-// toString()	Returns a string or a string object as a string
-// toUpperCase()	Returns a string converted to uppercase letters
-// trim()	Returns a string with removed whitespaces
-// valueOf()	Returns the primitive value of a string or a string object
+// Sorting an Array
+// The sort() method sorts an array alphabetically:
+
+// Example
+const fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.sort(); // Sorts the array in ascending order
+
+// Reversing an Array
+// The reverse() method reverses the elements in an array.
+
+// You can use it to sort an array in descending order:
+
+// Example
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+fruits2.sort();
+fruits2.reverse();
+
+// Numeric Sort
+// By default, the sort() function sorts values as strings.
+
+// This works well for strings ("Apple" comes before "Banana").
+
+// However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
+
+// Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+// You can fix this by providing a compare function:
+
+// Example
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function (a, b) {
+  return a - b;
+});
+
+// Sorting Object Arrays
+// JavaScript arrays often contain objects:
+
+// Example
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
+// Even if objects have properties of different data types, the sort() method can be used to sort the array.
+
+// The solution is to write a compare function to compare the property values:
+
+// Example
+cars.sort(function (a, b) {
+  return a.year - b.year;
+}); // Sorts the array in ascending order by year
