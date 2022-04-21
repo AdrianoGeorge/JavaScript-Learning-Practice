@@ -127,3 +127,38 @@ var carName;
 // Variables defined with const cannot be Reassigned.
 
 // Variables defined with const have Block Scope.
+
+//  --------------  Constant Arrays  --------------
+// You can change the elements of a constant array:
+
+// Example;
+// You can create a constant array:
+const cars = ["Saab", "Volvo", "BMW"];
+
+// You can change an element:
+cars[0] = "Toyota";
+
+// You can add an element:
+cars.push("Audi");
+
+//  -------------- Constant Objects  --------------
+// You can change the properties of a constant object:
+
+// Example
+//  --------------  You can create a const object: --------------
+const car = { type: "Fiat", model: "500", color: "white" };
+
+// You can change a property:
+car.color = "red";
+
+// You can add a property:
+car.owner = "Johnson";
+
+const t = 10;
+// Here x is 10
+
+{
+  const t = 2;
+  // Here x is 2
+}
+console.log(t); // Here x is 10
