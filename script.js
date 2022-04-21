@@ -71,3 +71,16 @@ let total = price1 + price2;
 // Variables defined with let must be Declared before use.
 
 // Variables defined with let have Block Scope.
+
+// Block Scope
+// Before ES6 (2015), JavaScript had only Global Scope and Function Scope.
+
+// ES6 introduced two important new JavaScript keywords: let and const.
+
+// These two keywords provide Block Scope in JavaScript.
+
+// Variables declared inside a { } block cannot be accessed from outside the block:
+{
+  let x = 2;
+}
+// x can NOT be used here
