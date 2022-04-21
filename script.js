@@ -1,42 +1,54 @@
-//  --------------   JavaScript Array Methods -------------
+//  --------------   JavaScript Sorting Arrays -------------
+//  --------------   by:  Adrian George  --------------------
 
-// Converting Arrays to Strings
-// The JavaScript method toString() converts an array to a string of (comma separated) array values.
+// Sorting an Array
+// The sort() method sorts an array alphabetically:
 
 // Example
 const fruits = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits.toString(); // Banana,Orange,Apple,Mango
+fruits.sort(); // Sorts the array in ascending order
 
-// The join() method also joins all array elements into a string.
+// Reversing an Array
+// The reverse() method reverses the elements in an array.
 
-// It behaves just like toString(), but in addition you can specify the separator:
-
-Example;
-const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
-document.getElementById("demo").innerHTML = fruits2.join(" * ");
-
-// Merging (Concatenating) Arrays
-// The concat() method creates a new array by merging (concatenating) existing arrays:
-
-// Example (Merging Two Arrays)
-const myGirls = ["Cecilie", "Lone"];
-const myBoys = ["Emil", "Tobias", "Linus"];
-
-const myChildren = myGirls.concat(myBoys);
-
-// JavaScript Array splice()
-// The splice() method can be used to add new items to an array:
+// You can use it to sort an array in descending order:
 
 // Example
-const fruits3 = ["Banana", "Orange", "Apple", "Mango"];
-fruits3.splice(2, 0, "Lemon", "Kiwi");
-// The first parameter (2) defines the position where new elements should be added (spliced in).
+const fruits2 = ["Banana", "Orange", "Apple", "Mango"];
+fruits2.sort();
+fruits2.reverse();
 
-// The second parameter (0) defines how many elements should be removed.
+// Numeric Sort
+// By default, the sort() function sorts values as strings.
 
-// The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+// This works well for strings ("Apple" comes before "Banana").
 
-// The splice() method returns an array with the deleted items:
+// However, if numbers are sorted as strings, "25" is bigger than "100", because "2" is bigger than "1".
 
-const fruits4 = ["Banana", "Orange", "Apple", "Mango"];
-fruits4.splice(2, 2, "Lemon", "Kiwi");
+// Because of this, the sort() method will produce incorrect result when sorting numbers.
+
+// You can fix this by providing a compare function:
+
+// Example
+const points = [40, 100, 1, 5, 25, 10];
+points.sort(function (a, b) {
+  return a - b;
+});
+
+// Sorting Object Arrays
+// JavaScript arrays often contain objects:
+
+// Example
+// const cars = [
+//   {type:"Volvo", year:2016},
+//   {type:"Saab", year:2001},
+//   {type:"BMW", year:2010}
+// ];
+// Even if objects have properties of different data types, the sort() method can be used to sort the array.
+
+// The solution is to write a compare function to compare the property values:
+
+// Example
+cars.sort(function (a, b) {
+  return a.year - b.year;
+}); // Sorts the array in ascending order by year
