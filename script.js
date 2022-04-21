@@ -1,14 +1,9 @@
-//  --------------    JavaScript Objects --------------
-// What is this?
-// In JavaScript, the this keyword refers to an object.
+//  --------------    Common HTML Events --------------
 
-// Which object depends on how this is being invoked (used or called).
-
-// The this keyword refers to different objects depending on how it is used:
-
-// In an object method, this refers to the object.
-// Alone, this refers to the global object.
-// In a function, this refers to the global object.
-// In a function, in strict mode, this is undefined.
-// In an event, this refers to the element that received the event.
-// Methods like call(), apply(), and bind() can refer this to any object.
+// Event	Description
+// onchange	An HTML element has been changed
+// onclick	The user clicks an HTML element
+// onmouseover	The user moves the mouse over an HTML element
+// onmouseout	The user moves the mouse away from an HTML element
+// onkeydown	The user pushes a keyboard key
+// onload	The browser has finished loading the page
